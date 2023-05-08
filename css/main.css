@@ -27,7 +27,7 @@ header{
   z-index: 1;
 }
 header a{
-  font-size: 1.5rem;
+  font-size: var(--Title-02);
   color: var(--White);
 }
 
@@ -89,7 +89,7 @@ main{
 }
 .news h2 img{
   width: 136px;
-  margin-bottom: 40px;
+  margin-bottom: var(--m-07);
 }
 .news h2::before{
   width: 62px; height: 70px;
@@ -137,9 +137,9 @@ main{
   padding: 120px 0 250px 0;
   color: var(--White);
   border-radius: 40px 40px 0 0;
-  /* top: -160px; */
   background: url(../img/subvisual_bg.png) no-repeat top center;
   background-size: cover;
+  /* top: -160px; */
 }
 .sub-visual::before{
   width: 100%; height: 100%;
@@ -167,17 +167,17 @@ main{
   text-align: center;
 }
 .sub-visual h2{
-  margin-bottom: 10px;
-  font-size: 2rem;
+  margin-bottom: var(--m-03);
+  font-size: var(--Title-04);
   line-height: 1.1;
 }
 .sub-visual p{
-  margin-bottom: 45px;
-  font-size: 1rem;
+  margin-bottom: var(--m-08);
+  font-size: var(--Body-03);
 }
 .sub-visual .sub-icon{
   width: 100%;
-  font-size: 0.875rem;
+  font-size: var(--Body-02);
   display: flex;
   justify-content: space-between;
 }
@@ -270,28 +270,27 @@ main{
  * MAIN/STORE
  * ************************************** */  
 .store{
-  padding: 80px 0 50px 0;
+  padding: 80px 0 90px 0;
   background: var(--Black);
   color: var(--White);
 }
 .store h2{
-  font-size: 3.25rem;
+  font-size: var(--Display-03);
   line-height: 1.1;
-  margin-bottom: var(--m-01);
+  margin-bottom: var(--m-03);
 }
-.store p{margin-bottom: var(--m-01);}
+.store p{margin-bottom: var(--m-07);}
 .store .swiper-wrapper{
-  gap: var(--m-01);
+  gap: var(--m-04);
 }
 .store .swiper-slide{
   display: flex;
   flex-direction: column;
-  /* background-color: yellow; */
 }
 /* 타이틀 */
 .store .tit-wrap{
   width: 275px; height: 275px;
-  margin-bottom: var(--m-01);
+  margin-bottom: var(--m-05);
   left: -200px;
   position: relative;
 }
@@ -300,7 +299,6 @@ main{
 }
 .store .tit-mask{
   width: 205px; height: 205px;
-  /* background-color: orange; */
   transform: rotate(45deg);
   margin-bottom: var(--m-01);
   overflow: hidden;
@@ -310,7 +308,6 @@ main{
 }
 .store .tit{
   width: 275px; height: 275px;
-  /* background: var(--Secondary-violet); */
   transform: rotate(-45deg);
   display: flex;
   justify-content: center;
@@ -345,7 +342,6 @@ main{
 }
 /* 매장정보 */
 .store .info{
-  /* width: 100%; */
   padding: 30px 20px 20px 20px;
   border-radius: 8px;
   background-color: var(--White);
@@ -354,22 +350,28 @@ main{
   margin-bottom: var(--m-01);
 }
 .store .txt-wrap .name{
-  font-size: 1.25rem;
+  margin-bottom: var(--m-03);
+  font-size: var(--Title-01);
   color: var(--Secondary-violet);
 }
 .store .txt-wrap li{
-  margin-bottom: 10px;
-  font-size: 0.875rem;
+  margin-bottom: var(--m-02);
+  font-size: var(--Body-08);
   color: var(--Black);
+}
+.store .txt-wrap li:last-child{
+  margin-bottom: var(--m-06);
 }
 .store .button-wrap{
   width: 100%;
   display: flex;
   justify-content: space-between;
-  /* background-color: blueviolet; */
 }
 .store .button-wrap button{
-  width: calc(50% - 4px);
+  width: calc(50% - 4px); height: 60px;
+}
+.store .swiper-pagination{
+  left: 0;  right: 0;  bottom: -35px;
 }
 /* ************************************** *
  * MAIN/THEME
@@ -380,7 +382,7 @@ main{
 }
 .theme h2{
   width: 215px;
-  margin-bottom: var(--m-01);
+  margin-bottom: var(--m-05);
 }
 .theme .swiper-wrapper{
   gap: 16px;
@@ -397,34 +399,31 @@ main{
   border-radius: 20px;
   display: block;
 }
-/* .theme .con1 a:nth-child(1)::before{
-  width: 206px; height: 280px;
-  background: url(../img/brand_playpark.jpg);
-  background-size: contain;
-  opacity: 0.2;
-  position: absolute;
-  display: block;
-  content: '';
-} */
 .theme .con1,.con2{
   display: flex;
   gap: 16px;
 }
-.theme .con1 a:nth-child(1){
-  width: 56%; height: 280px;
-  background: var(--Secondary-violet);
+.theme .con1-01,.theme .con1-02,.theme .con2-01,.theme .con2-02{
+  position: relative;
 }
-.theme .con1 a:nth-child(2){
-  width: 40%; height: 280px;
-  background: var(--Secondary-pink);
-}
-.theme .con2 a:nth-child(1){
-  width: 42%; height: 190px;
-  background: var(--Primary);
-}
-.theme .con2 a:nth-child(2){
-  width: 54%; height: 190px;
-  background: var(--Secondary-blue);
+.theme .con1-01{width: 56%; height: 280px; background: var(--Secondary-violet);}
+.theme .con1-02{width: 40%; height: 280px; background: var(--Secondary-pink);}
+.theme .con2-01{width: 42%; height: 190px; background: var(--Primary);}
+.theme .con2-02{width: 54%; height: 190px; background: var(--Secondary-blue);}
+.theme .con1-01:before{background: url(../img/brand_playpark.jpg);}
+.theme .con1-02:before{background: url(../img/brand_sports.jpg);}
+.theme .con2-01:before{background: url(../img/brand_zoo.jpg);}
+.theme .con2-02:before{background: url(../img/subvisual_bg.png);}
+.theme .con1-01::before,.theme .con1-02::before,
+.theme .con2-01::before,.theme .con2-02::before{
+  width: 100%; height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  left: 0; top: 0;
+  position: absolute;
+  display: block;
+  content: '';
 }
 .theme .swiper-pagination{
   left: 0;  right: 0;  bottom: -35px;
@@ -432,43 +431,51 @@ main{
 
 /* ************************************** *
  * MAIN/FAQ
- * ************************************** */  
-.faq{
-}
+ * ************************************** */
 .faq .inner{
   padding: 80px 0 50px 0;
 }
 .faq h2{
-  font-size: 4rem;
+  margin-bottom: var(--m-06);
+  font-size: var(--Display-04);
 }
 .faq h2 span:nth-child(1){
   color: var(--Primary);
 }
 .faq .list{
+  width: 100%;
   border-radius: 8px;
   background: var(--Gray-06);
 }
 .faq .dep1{
-  padding: 10px 15px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--Gray-05);
 }
+/* Q질문 타이틀 */
 .faq .q{
-  padding: 10px 0;
+  width: 100%;
+  font-size: var(--Body-04);
   display: flex;
-  align-items: center;
+  align-items: start;
+  position: relative;
 }
 .faq .q .ex-bold{
   color: var(--Primary);
-  font-size: 2rem;
-  margin-right: 8px;
+  font-size: var(--Title-04);
+  margin-right: var(--m-02);
 }
 .faq .q-txt{
-  width: 280px;
+  width: 80%;
+  margin-top: var(--m-03);
 }
 .faq .close-ico{
   width: 28px; height: 28px;
+  margin: var(--m-02);
   background: var(--Primary);
   border-radius: 100%;
-  position: relative;
+  right: 0;
+  position: absolute;
 }
 .faq .close-ico span{
   width: 16px; height: 2px;
@@ -481,17 +488,64 @@ main{
 .faq .close-ico span:nth-child(2){
   transform: rotate(-90deg);
 }
-.faq .close-ico:hover span:nth-child(1){
+.faq .dep1:hover .close-ico span:nth-child(1){
   transform: rotate(45deg);
 }
-.faq .close-ico:hover span:nth-child(2){
+.faq .dep1:hover .close-ico span:nth-child(2){
   transform: rotate(-45deg);
 }
 
+/* A대답 */
+.faq .a-wrap{
+  margin: var(--m-03) 0 var(--m-01);
+  background: var(--White);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: none;
+}
+.faq .dep1:hover .a-wrap{
+  display: block;
+}
+.faq .a{
+  display: flex;
+}
+.faq .a span{
+  margin-right: var(--m-02);
+  font-size: var(--Title-01);
+  color: var(--Primary);
+}
+.faq .a p{
+  margin-top: var(--m-01);
+}
 /* ************************************** *
  * FOOTER
  * ************************************** */  
 footer{
-  /* width: 100%; height: 50px; */
-  /* background: var(--Gray-dark); */
+  color: var(--White);
 }
+footer .contact{
+  width: 100%;
+  padding: 80px 0;
+  background: var(--Primary);
+  font-size: 1.25rem;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative;
+}
+footer .contact::before{
+  width: 100%; height: 100%;
+  background: url(../img/subvisual_bg.png) no-repeat top;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: .17;
+  position: absolute;
+  display: block;
+  content: '';
+}
+footer .contact ul li{margin-bottom: var(--m-03);}
+footer .contact .bold{font-size: 1.5rem;}
+footer .info{
+  padding: 60px 0 50px 0; 
+  background: var(--Gray-01);
+  line-height: 1.6;
+}
+footer .copy{margin-top: var(--m-04); font-size: var(--Body-01);} 

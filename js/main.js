@@ -13,7 +13,6 @@ new Swiper('.news .swiper', {
 })
 
 new Swiper('.store .swiper', {
-  // autoplay: true, 
   loop: true,
   slidesPerView: 1,
   pagination: {
@@ -23,7 +22,6 @@ new Swiper('.store .swiper', {
 })
 
 new Swiper('.theme .swiper', {
-  // autoplay: true, 
   loop: true,
   slidesPerView: 1,
   pagination: {

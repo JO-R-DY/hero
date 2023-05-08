@@ -47,8 +47,16 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   --Display-01: 2.5rem; /*40px*/
   --Display-02: 3rem; /*48px*/
   --Display-03: 3.25rem; /*52px*/
+  --Display-04: 4rem; /*64px*/
   /* margin */
-  --m-01: 20px;
+  --m-01: 4px;
+  --m-02: 8px;
+  --m-03: 12px;
+  --m-04: 16px;
+  --m-05: 24px;
+  --m-06: 32px;
+  --m-07: 40px;
+  --m-08: 48px;
 }
 
 /* ************************************** *
@@ -57,7 +65,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 @keyframes dongdong{
   
 }
-
 /* ************************************** *
  * SMALL DEVICES (-430px) MOBILE FIRST
  * ************************************** */  
@@ -69,10 +76,11 @@ body{
   margin: auto; 
   font-family: "Pretendard Variable", Pretendard, Roboto, sans-serif;
   font-weight: 400; line-height: 1.4; letter-spacing: -0.8px;
+  color: var(--Gray-02);
   overflow-x: hidden;
   word-break: keep-all;
 }
-a{color: var(--Gray-txt-color);}
+a{color: var(--Gray-02);}
 
 /* 클래스 공통스타일 */
 .wrap{
@@ -126,10 +134,12 @@ a{color: var(--Gray-txt-color);}
   font-size: 0.875rem;
   color: var(--White);
   cursor: pointer;
+  border: 1px solid transparent;
 }
 .btn:hover{
   background-color: var(--White);
   color: var(--Primary);
+  border: 1px solid var(--Primary);
 }
 .btn.btn--blue{
   background: var(--Secondary-blue);
@@ -138,6 +148,7 @@ a{color: var(--Gray-txt-color);}
 .btn:hover.btn--blue{
   background: var(--White);
   color: var(--Secondary-blue);
+  border: 1px solid var(--Secondary-blue);
 }
 /* swiper-클래스 공통스타일 */
 .swiper{
@@ -158,7 +169,7 @@ a{color: var(--Gray-txt-color);}
   width: 5px; height: 5px;
   margin-right: 10px;
   border-radius: 5px;
-  background-color: var(--Gray-paging);
+  background-color: var(--Gray-04);
   outline: none;
 }
 .swiper-pagination .swiper-pagination-bullet:last-child {
@@ -170,6 +181,7 @@ a{color: var(--Gray-txt-color);}
 /* ************************************** *
  * MEDIUM DEVICES (430px-)
  * ************************************** */  
-@media all and (min-width: 431px) {
+@media all and (min-width: 1000px) {
   html{font-size: 20px;}
+  .inner{width: 70%; margin: 0 auto;}
 }
